@@ -1,7 +1,10 @@
+import Header from "../components/Header"
 
-const Home = () => {
+function Home() {
   return (
-    <div>Home</div>
+    <>
+        <Header />
+    </>
   )
 }
 
