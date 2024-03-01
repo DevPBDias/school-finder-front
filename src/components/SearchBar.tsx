@@ -24,6 +24,14 @@ const SearchBarContainer = styled.div`
         z-index: 1;
         width: 100%;
         height: 2.5em;
+        border-radius: 8px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &::placeholder {
+            padding-left: 1em;
+            font-size: 1rem;
+        }
     }
 `;
 

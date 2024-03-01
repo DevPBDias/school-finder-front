@@ -1,6 +1,7 @@
 import Logo from './Logo'
 import styled from "styled-components";
 import SearchBar from './SearchBar';
+import RegisterBtn from './RegisterBtn';
 
 const HeaderContainer = styled.header`
     width: 100%;
@@ -24,7 +25,7 @@ function Header() {
       <div className='header_content'>
         <Logo />
         <SearchBar />
-        <button type='button'>Cadastrar escola</button>
+        <RegisterBtn />
       </div>
     </HeaderContainer>
   )
