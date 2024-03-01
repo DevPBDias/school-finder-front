@@ -1,14 +1,32 @@
-import logo from '../assets/schoolLogo.png'
+import Logo from './Logo'
+import styled from "styled-components";
+import SearchBar from './SearchBar';
+
+const HeaderContainer = styled.header`
+    width: 100%;
+    height: 5.5em;
+    background-color: #989EC2;
+
+    .header_content {
+      width: 70%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      justify-items: center;
+      align-items: center;
+      margin: auto;
+    }
+`;
 
 function Header() {
   return (
-    <header>
-        <div>
-            <img src={logo} alt="logo website" />
-            <input type="text" placeholder='Digite o nome da escola' />
-            <button type='button'>Cadastrar escola</button>
-        </div>
-    </header>
+    <HeaderContainer>
+      <div className='header_content'>
+        <Logo />
+        <SearchBar />
+        <button type='button'>Cadastrar escola</button>
+      </div>
+    </HeaderContainer>
   )
 }
 
