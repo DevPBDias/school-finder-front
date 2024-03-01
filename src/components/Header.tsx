@@ -1,7 +1,7 @@
 import Logo from './Logo'
 import styled from "styled-components";
 import SearchBar from './SearchBar';
-import RegisterBtn from './RegisterBtn';
+import NavigateBtn from './NavigateBtn';
 
 const HeaderContainer = styled.header`
     width: 100%;
@@ -16,6 +16,18 @@ const HeaderContainer = styled.header`
       justify-items: center;
       align-items: center;
       margin: auto;
+
+    button {
+      width: 15%;
+      height: 2.2em;
+      background-color: #FABC2A;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              // https://getcssscan.com/css-box-shadow-examples
+      }
     }
 `;
 
@@ -25,7 +37,7 @@ function Header() {
       <div className='header_content'>
         <Logo />
         <SearchBar />
-        <RegisterBtn />
+        <NavigateBtn route='search' text='Cadastrar escola' />
       </div>
     </HeaderContainer>
   )
