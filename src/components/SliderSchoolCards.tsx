@@ -5,16 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  padding: 1em;
-  gap: 1em;
-  
-  .div-slider {
-      width: 95%;
-      margin: auto;
-    }
+    width: 90%;
+    margin: auto;
     
     .link {
         width: 15em;
@@ -24,19 +16,19 @@ const CardContainer = styled.div`
         position: relative;
 
         
-    .img-bg {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        padding: .3em;
-
-        img {
-            border-radius: 8px;
+        .img-bg {
+            position: absolute;
+            z-index: 1;
             width: 100%;
-            height: 100%;   
+            height: 100%;
+            padding: .3em;
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+                height: 100%;   
+                }
         }
-    }
 
     .text-content {
         position: absolute;
@@ -69,14 +61,15 @@ const CardContainer = styled.div`
 
         p {
             color: #FABC2A;
-            font-size: .8rem;
+            font-size: .75rem;
         }
     }
 }
 `
 
-function SchoolCards({ data }: any) {
+function SliderSchoolCards({ data }: any) {
     const getSchools = data?.map((elem: any) => elem)
+
     const settings = {
         className: "center",
         infinite: true,
@@ -91,8 +84,7 @@ function SchoolCards({ data }: any) {
     };
 
     return (
-        <CardContainer>
-            <div className="div-slider">
+            <CardContainer className="div-slider">
                 <Slider {...settings}>
                     {
                         getSchools?.map((elem: any, index: number) => (
@@ -114,9 +106,8 @@ function SchoolCards({ data }: any) {
                         ))
                     }
                 </Slider>
-            </div>
-        </CardContainer>
+            </CardContainer>
     )
 }
 
-export default SchoolCards
+export default SliderSchoolCards

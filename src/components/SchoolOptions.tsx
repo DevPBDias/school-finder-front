@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { SchoolContext } from '../context/SchoolContext'
-import SchoolCard from './SchoolCard'
+import SliderSchoolCards from './SliderSchoolCards'
 import { useNavigate } from 'react-router-dom'
 import { styled } from "styled-components"
 
@@ -31,7 +31,7 @@ function SchoolOptions() {
                     Encontrar escola
                 </button>
             </div>
-            <SchoolCard data={schools.items} />
+            <SliderSchoolCards data={schools.items} />
         </OptionsContainer>
     )
 }
