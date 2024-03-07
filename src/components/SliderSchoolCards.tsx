@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     
     .link {
         width: 15em;
@@ -14,7 +14,6 @@ const CardContainer = styled.div`
         border: none;
         border-radius: 8px;
         position: relative;
-
         
         .img-bg {
             position: absolute;
